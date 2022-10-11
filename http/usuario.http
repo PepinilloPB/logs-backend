@@ -1,0 +1,21 @@
+###Crear usuario
+POST http://localhost:3000/user
+Content-type: application/json
+
+{
+    "nombres": "A",
+    "apellidos": "A",
+    "email": "example@gmail.com",
+    "contrasenia": "123",
+    "lastupdate" : "2022-09-28T17",
+    "tuplstatus" : "true"
+}
+
+### login
+GET http://localhost:3000/user
+Content-type: application/json
+
+{
+    "email": "example@gmail.com",
+    "contrasenia": "123"
+}
