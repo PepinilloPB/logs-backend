@@ -17,7 +17,7 @@ const database_1 = __importDefault(require("../database"));
 class UserController {
     create(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
-            console.log('Hello from create user!');
+            // console.log('Hello from create user!');
             yield database_1.default.promise().query(' INSERT INTO Usuario ' +
                 ' SET ? ', [req.body]);
             res.json({ message: "Usuario creado con exito" });
@@ -25,12 +25,12 @@ class UserController {
     }
     read(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
-            console.log('Hello from read user!');
-            console.log(req.body.email);
+            // console.log('Hello from read user!');
+            // console.log(req.body.email);
             const email = req.body.email;
             const contrasenia = req.body.contrasenia;
-            console.log('email: ', email);
-            console.log('contrasenia: ', contrasenia);
+            // console.log('email: ', email);
+            // console.log('contrasenia: ', contrasenia);
             const users = yield database_1.default.promise().query(' SELECT u.email, ' +
                 ' u.contrasenia ' +
                 ' FROM Usuario u ' +

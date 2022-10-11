@@ -6,9 +6,7 @@ Content-type: application/json
     "nombres": "A",
     "apellidos": "A",
     "email": "example@gmail.com",
-    "contrasenia": "123",
-    "lastupdate" : "2022-09-28T17",
-    "tuplstatus" : "true"
+    "contrasenia": "123"
 }
 
 ### login
