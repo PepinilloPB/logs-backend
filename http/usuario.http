@@ -1,3 +1,4 @@
+###LOCAL
 ###Crear usuario
 POST http://localhost:3000/user
 Content-type: application/json
@@ -11,6 +12,28 @@ Content-type: application/json
 
 ### login
 GET http://localhost:3000/user
+Content-type: application/json
+
+{
+    "email": "example@gmail.com",
+    "contrasenia": "123"
+}
+
+
+###HEROKU 
+###Crear usuario
+POST https://thawing-thicket-51863.herokuapp.com/user
+Content-type: application/json
+
+{
+    "nombres": "A",
+    "apellidos": "A",
+    "email": "example1@gmail.com",
+    "contrasenia": "1234"
+}
+
+### login
+GET https://thawing-thicket-51863.herokuapp.com/user
 Content-type: application/json
 
 {

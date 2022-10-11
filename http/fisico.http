@@ -1,3 +1,4 @@
+###LOCAL
 ###Crear un log
 POST http://localhost:3000/fis
 Content-Type: application/json
@@ -36,3 +37,44 @@ Content-Type: application/json
 
 ###Actualizar un log
 DELETE http://localhost:3000/fis/1
+
+
+###HEROKU
+###Crear un log
+POST https://thawing-thicket-51863.herokuapp.com/fis
+Content-Type: application/json
+
+{
+    "idArea": 1,
+    "idServicio": 1,
+    "fecha": "2022-09-28T17",
+    "condicionServicio": "A",
+    "nroEvento": "1",
+    "tipoEvento": "A",
+    "condicion": "A",
+    "resultado": "A",
+    "responsable": "A"
+}
+
+###Listar todos los logs
+GET https://thawing-thicket-51863.herokuapp.com/fis
+
+###Listar un log
+GET https://thawing-thicket-51863.herokuapp.com/fis/2
+
+###Listar todos las areas de logs
+###GET https://thawing-thicket-51863.herokuapp.com/fis/area
+
+###Listar todos los servicios de logs
+###GET https://thawing-thicket-51863.herokuapp.com/fis/serv
+
+###Actualizar un log
+PUT https://thawing-thicket-51863.herokuapp.com/fis/2
+Content-Type: application/json
+
+{
+    "condicion": "B"
+}
+
+###Actualizar un log
+DELETE https://thawing-thicket-51863.herokuapp.com/fis/1

@@ -1,3 +1,4 @@
+###LOCAL
 ###Crear un log
 POST http://localhost:3000/soft
 Content-Type: application/json
@@ -28,3 +29,37 @@ Content-Type: application/json
 
 ###Actualizar un log
 DELETE http://localhost:3000/soft/1
+
+
+
+###HEROKU
+###Crear un log
+POST https://thawing-thicket-51863.herokuapp.com/soft
+Content-Type: application/json
+
+{
+    "idTipoSoftware": 1,
+    "codigo": "1",
+    "marca": "A",
+    "version": "A"
+}
+
+###Listar todos los logs
+GET https://thawing-thicket-51863.herokuapp.com/soft/
+
+###Listar un log
+GET https://thawing-thicket-51863.herokuapp.com/soft/2
+
+###Listar todos los tipos de logs
+GET https://thawing-thicket-51863.herokuapp.com/soft/type
+
+###Actualizar un log
+PUT https://thawing-thicket-51863.herokuapp.com/soft/2
+Content-Type: application/json
+
+{
+    "marca": "B"
+}
+
+###Actualizar un log
+DELETE https://thawing-thicket-51863.herokuapp.com/soft/1

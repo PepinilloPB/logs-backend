@@ -1,3 +1,4 @@
+###LOCAL
 ###Crear un log
 POST http://localhost:3000/help
 Content-Type: application/json
@@ -28,3 +29,37 @@ Content-Type: application/json
 
 ###Actualizar un log
 DELETE http://localhost:3000/help/1
+
+
+
+###HEROKU
+###Crear un log
+POST https://thawing-thicket-51863.herokuapp.com/help
+Content-Type: application/json
+
+{
+    "idTipoSoporte": 1,
+    "usuario": "1",
+    "condicion": "A",
+    "resultado": "A"
+}
+
+###Listar todos los logs
+GET https://thawing-thicket-51863.herokuapp.com/help
+
+###Listar un log
+GET https://thawing-thicket-51863.herokuapp.com/help/2
+
+###Listar todos los tipos de logs
+###GET https://thawing-thicket-51863.herokuapp.com/help/type
+
+###Actualizar un log
+PUT https://thawing-thicket-51863.herokuapp.com/help/2
+Content-Type: application/json
+
+{
+    "condicion": "B"
+}
+
+###Actualizar un log
+DELETE https://thawing-thicket-51863.herokuapp.com/help/1

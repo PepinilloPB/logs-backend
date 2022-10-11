@@ -1,3 +1,4 @@
+###LOCAL
 ###Crear un log
 POST http://localhost:3000/otro
 Content-Type: application/json
@@ -25,3 +26,34 @@ Content-Type: application/json
 
 ###Actualizar un log
 DELETE http://localhost:3000/otro/1
+
+
+
+###HEROKU
+###Crear un log
+POST https://thawing-thicket-51863.herokuapp.com/otro
+Content-Type: application/json
+
+{
+    "caso": "1",
+    "descripcion": "A",
+    "condicion": "A",
+    "resultado": "A"
+}
+
+###Listar todos los logs
+GET https://thawing-thicket-51863.herokuapp.com/otro
+
+###Listar un log
+GET https://thawing-thicket-51863.herokuapp.com/otro/2
+
+###Actualizar un log
+PUT https://thawing-thicket-51863.herokuapp.com/otro/2
+Content-Type: application/json
+
+{
+    "descripcion": "B"
+}
+
+###Actualizar un log
+DELETE https://thawing-thicket-51863.herokuapp.com/otro/1

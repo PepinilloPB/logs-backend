@@ -1,3 +1,4 @@
+###LOCAL
 ###Crear un log
 POST http://localhost:3000/telc
 Content-Type: application/json
@@ -23,3 +24,32 @@ Content-Type: application/json
 
 ###Actualizar un log
 DELETE http://localhost:3000/telc/1
+
+
+
+###HEROKU
+###Crear un log
+POST https://thawing-thicket-51863.herokuapp.com/telc
+Content-Type: application/json
+
+{
+    "idHardwareLog": 1,
+    "idSoftwareLog": 1
+}
+
+###Listar todos los logs
+GET https://thawing-thicket-51863.herokuapp.com/telc
+
+###Listar un log
+GET https://thawing-thicket-51863.herokuapp.com/telc/2
+
+###Actualizar un log
+PUT https://thawing-thicket-51863.herokuapp.com/telc/2
+Content-Type: application/json
+
+{
+    "idHardwareLog": 2
+}
+
+###Actualizar un log
+DELETE https://thawing-thicket-51863.herokuapp.com/telc/1
